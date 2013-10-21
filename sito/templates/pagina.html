@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p><h1>{{ page.titolo }}</h1>
+
+<p><h3>{{ page.body }}</h3>
+<p></p>
+<p></p>
+<p></p>
+{% for allegato in allegati_list %}
+<p><h2>{{ allegati.titoloallegato }}</h2></p>
+{% endfor %}
+<p></p>
+<p></p>
+<p></p>
+
+{% for galleria in galleria_list %}
+<p><h3>{{ galleria.gallerianome }}</h3>
+{% endfor %}
+
+
+{% endblock content %}

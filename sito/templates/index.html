@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for page in page_list %}
+
+{{ page.titolo }}
+
+{{ page.body }}
+
+{% endfor %}
+
+{% endblock content %}
+
+
