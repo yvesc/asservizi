@@ -1,0 +1,14 @@
+Ciao,
+
+Hai ricevuto una richiesta dal Sito internet asservizi.it
+
+Nome: {{ nome }}
+Cognome: {{ cognome }}
+Azienda: {{ azienda }}
+Email: {{ email }}
+Telefono: {{ telefono }}
+Mobile: {{ mobile }}
+Tematica: {{ tematica }}
+Messaggio: {{ messaggio }}
+
+Buona Giornata!

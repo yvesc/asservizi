@@ -1,0 +1,34 @@
+{% extends "baseemail.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<p class="titolo" style="color: #ae3624;"><br/>Contatti</p>
+<p></p>
+<p><b>Sede Operativa:</b></p>
+<p>AS servizi alle imprese s.r.l</br>
+	Via C. Maffei, 11 -  24128 BERGAMO</br>
+Tel. 035.238112 - Fax 035.224525</br>
+<a href="mailto:info@asservizi.it">info@asservizi.it</a></p>
+<p></p>
+<hr>
+<p><b>Sede Legale:</b></p>
+<p>AS servizi alle imprese s.r.l</br>
+	Via Roma, 133/D-G - 24064 GRUMELLO DEL MONTE (BG)</br>
+Tel. 035.833.843 - Fax 035.833.847</p>
+<a href="mailto:info@asservizi.it">info@asservizi.it</a>
+<p></p>
+<hr>
+<p></br></p>
+
+
+<form action="" method="post">{% csrf_token %}
+    <p>{{ form.as_ul }}</p>
+    <input class="pulsantone" type="submit" value="{% trans "Invia" %}" />
+</form>
+<p></br></p>
+<p></br>
+</br>
+</br></p>
+{% endblock %}
+

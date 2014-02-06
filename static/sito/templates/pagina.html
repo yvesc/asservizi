@@ -1,0 +1,33 @@
+{% block content %}
+{% load i18n %}
+
+<p><span class="titolo" style="color: #ae3624;"><br/>{{ page.titolo }}</span></span>
+{{ page.body|safe|linebreaks }}
+<p></p>
+<span class='st_sharethis_vcount' displayText='ShareThis'></span>
+<span class='st_facebook_vcount' displayText='Facebook'></span>
+<span class='st_twitter_vcount' displayText='Tweet'></span>
+<span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+<span class='st_email_vcount' displayText='Email'></span>
+<p></p>
+{% for allegato in allegati_list %}
+<p>{{ allegati.titoloallegato }}</p>
+
+{% endfor %}
+<p></br></p>
+<hr>
+<h3>Richiesta Informazioni</h3>
+<form action="" method="post">{% csrf_token %}
+    <p>{{ form2 }}</p>
+    <input class="pulsantone" type="submit" value="{% trans "Invia" %}" />
+</form>
+
+
+
+
+
+<p>{% include 'gallery.html' %}</p>
+
+
+
+{% endblock content %}

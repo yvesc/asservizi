@@ -1,0 +1,23 @@
+    #DocumentRoot /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi
+    #ServerAdmin root@vps42667
+    ServerName asservizi.it
+    ServerAlias asservizi.it
+    # Other directives here
+    WSGIScriptAlias / /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/apache/django.wsgi
+     
+   #Alias /static/admin/ //var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/lib/python2.7/site-packages/django/contrib/admin/static/admin/
+    Alias /static/admin/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/admin/
+    Alias /static/image_cropping/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/image_cropping/
+    #Alias /static/filer/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/filer/
+    Alias /static/contact_form/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/contact_form/
+    Alias /static/tiny_mce/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/tiny_mce/
+    #Alias /static/commenti_form/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/commenti_form/
+    #Alias /static/tinymce/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/ckeditor/
+    Alias /static/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/static/
+    #Alias /media/ /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/media/
+    <Directory /var/www/vhosts/vps42667.ovh.net/asservizi.it/asservizi/asservizi/apache>
+    <Files django.wsgi>
+    Order allow,deny
+    Allow from all  
+    </Files>
+    </Directory>

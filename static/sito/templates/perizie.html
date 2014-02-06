@@ -1,0 +1,27 @@
+{% extends "base6.html" %}
+
+{% block content %}
+
+<script>
+$(function(){
+    $('a#linkprova').on('click', function(e){
+        e.preventDefault();
+        var page_url=$(this).prop('href');
+        $('#testosottocard').load(page_url);
+    });
+});
+</script>
+
+{% for page in page_list %}
+
+<div class="areaintro">
+<h3>{{ page.titolo }}</h3>
+<p>{{page.body|safe|truncatechars:340}}</p>
+<a id="linkprova" href="{{MYPATH}}/pagina/{{ page.id }}">continua...</a></p>
+<p></br></p>
+<hr>
+</div>
+{% endfor %}
+
+{% endblock content %}
+

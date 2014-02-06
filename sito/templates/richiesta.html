@@ -1,0 +1,20 @@
+{% extends "baseemail.html" %}
+{% block content %}
+{% load i18n %}
+
+<p><span class="titolo" style="color: #ae3624;"><br/>Richiesta Informazioni</span></span>
+
+<h3></h3>
+<form action="{{ MYPATH }}/contact/" method="post">{% csrf_token %}
+    <p>{{ form2 }}</p>
+    <input class="pulsantone" type="submit" value="{% trans "Invia" %}" />
+</form>
+<p></br></p>
+<p></br></p>
+<p></br></p>
+<p></br>
+</br>
+</br></p>
+
+
+{% endblock content %}

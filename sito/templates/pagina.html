@@ -1,23 +1,35 @@
-{% extends "base.html" %}
-
 {% block content %}
+{% load i18n %}
 
-<p><h1>{{ page.titolo }}</h1>
-
-<p><h3>{{ page.body }}</h3>
+<p><span class="titolo" style="color: #ae3624;"><br/>{{ page.titolo }}</span></span>
+{{ page.body|safe|linebreaks }}
 <p></p>
-<p></p>
+<span class='st_sharethis_vcount' displayText='ShareThis'></span>
+<span class='st_facebook_vcount' displayText='Facebook'></span>
+<span class='st_twitter_vcount' displayText='Tweet'></span>
+<span class='st_linkedin_vcount' displayText='LinkedIn'></span>
+<span class='st_email_vcount' displayText='Email'></span>
+<p></br></p>
 <p></p>
 {% for allegato in allegati_list %}
-<p><h2>{{ allegati.titoloallegato }}</h2></p>
-{% endfor %}
-<p></p>
-<p></p>
-<p></p>
+<p>{{ allegati.titoloallegato }}</p>
 
-{% for galleria in galleria_list %}
-<p><h3>{{ galleria.gallerianome }}</h3>
 {% endfor %}
+<p></br></p>
+<hr>
+<h3>Richiesta Informazioni</h3>
+<form action="{{ MYPATH }}/contact/" method="post">{% csrf_token %}
+    <p>{{ form2 }}</p>
+    <input class="pulsantone" type="submit" value="{% trans "Invia" %}" />
+</form>
+<p></br></p>
+<p></br></p>
+<p></br></p>
+<p></br>
+</br>
+</br></p>
+
+
 
 
 {% endblock content %}

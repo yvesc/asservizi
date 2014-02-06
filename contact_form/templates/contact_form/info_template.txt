@@ -1,0 +1,15 @@
+Hi there,
+
+You have receive a contact request.
+
+Nome: {{ nome }}
+Cognome: {{ cognome }}
+Azienda: {{ azienda }}
+Email: {{ email }}
+Telefono: {{ telefono }}
+Tematica: {{ tematica }}
+Mobile: {{ mobile }}
+
+Messaggio: {{ messaggio }}
+
+Have a great day!

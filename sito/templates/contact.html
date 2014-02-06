@@ -1,0 +1,44 @@
+{% extends "base7.html" %}
+
+{% block content %}
+
+<div id="contenitorecard">
+<p><H3>AS Servizi s.r.l.</h3></p>
+<p>Via C. Maffei, 11 - 24128 BERGAMO</p>
+<p>Tel. 035.238112 - Fax 035.224525</p>
+<p><a href="mailto: info@asservizi.it">info@asservizi.it</a></p>
+<p>&nbsp;</p>
+
+<form action="/contact/" method="post">{% csrf_token %}
+<p><label for="id_subject">Nome:</label></p>
+<p><input id="id_subject" type="text" name="subject" class="contactform"/></p>
+<p><label for="id_subject">Cognome:</label></p>
+<p><input id="id_subject" type="text" name="subject" class="contactform" /></p>
+
+<p><label for="id_subject">Indirizzo:</label></p>
+<p><input id="id_address" type="text" name="address" class="contactform" /></p>
+
+<p><label for="id_subject">Città:</label></p>
+<p><input id="id_city" type="text" name="city" maxlength="250" class="contactform" /></p>
+
+<p><label for="id_subject">Telefono:</label></p>
+<p><input id="id_tel" type="text" name="tel" maxlength="100" class="contactform" /></p>
+
+<p><label for="id_subject">Fax:</label></p>
+<p><input id="id_fax" type="text" name="fax" maxlength="100" class="contactform"/></p>
+
+<p><label for="id_sender">email:</label></p>
+    <p><input type="email" name="sender" id="id_sender" class="contactform" /></p>
+
+<p><label for="id_message">Messaggio:</label></p>
+<p><textarea name="textarea" class="contactform" rows="6" cols="40" > </textarea></p>
+
+<p><label for="id_cc_myself">Inviami una copia del messaggio:</label></p>
+<P><input type="checkbox" name="cc_myself" id="id_cc_myself" /></p>
+<input type="submit" value="Submit" />
+</form>
+</div>
+
+{% endblock content %}
+
+

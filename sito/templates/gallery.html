@@ -1,0 +1,6 @@
+{% for galleria in galleria_list %}
+{% load cropping %}
+ <p><img src="{% cropped_thumbnail galleria "cropping" %}"></p>
+ {% endfor %}
+
+        

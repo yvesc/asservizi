@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1100" />
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<title>AS SERVIZI</title>
+<link href="stiloso.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!------------ MENU CARICA LEFT ------------>
+<script>
+$(function(){
+    $('#menux li a').on('click', function(e){
+        e.preventDefault();
+        var page_url=$(this).prop('href');
+		$('#leftside').load(page_url);
+    });
+});
+</script>
+
+
+<!--------------- MENU ACTIVE ----------->
+<script>
+$(document).ready(function(){
+    var $menu = $("ul#menux li a");                
+    $menu.click(function(){
+        $menu.each(function(){
+            $(this).removeClass("active");
+        });
+        $(this).addClass("active");                  
+    });
+ });
+</script>
+
+
+<!----- cssmenu script ----->
+<script>
+$(document).ready(function(){
+    var $cssmenu = $("#cssmenu li a");                
+    $cssmenu.click(function(){
+        $cssmenu.each(function(){
+            $(this).removeClass("active");
+        });
+        $(this).addClass("active");                  
+    });
+ });
+</script>
+
+<!----------- HEADER --------->
+
+<!----------------- HOVER ------------------------->
+<script> 
+
+$(document).ready(function(){ 
+
+    $("li.menux1").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header1");
+	});
+	$("li.menux2").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header2");
+	});
+	$("li.menux3").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header3");
+	});	
+	$("li.menux4").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header4");
+	}); 	
+	$("li.menux5").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header5");
+	});
+	$("li.menux6").on('mouseover', function(){ $
+		("#header").removeClass().addClass("header6");
+	});
+});
+
+
+</script>
+
+<!----------- CLICK HEADER --------->
+<script> 
+
+$(document).ready(function(){ 
+
+    $("li.menux1").click( function(){ $
+		("#header").removeClass().addClass("header1");
+	});
+	$("li.menux2").click( function(){ $
+		("#header").removeClass().addClass("header2");
+	});
+	$("li.menux3").click( function(){ $
+		("#header").removeClass().addClass("header3");
+	}); 	
+	$("li.menux4").click( function(){ $
+		("#header").removeClass().addClass("header4");
+	}); 	
+	$("li.menux5").click( function(){ $
+		("#header").removeClass().addClass("header5");
+	});
+	$("li.menux6").click( function(){ $
+		("#header").removeClass().addClass("header6");
+	});
+});
+
+
+</script>
+
+<!----------- fine header ------->
+
+
+<body topmargin="0" id="body">
+<!-- Header -->
+<div id="sfondo"></div>
+<div id="header" class="header">
+
+<!-- TOP MENU -->
+<div id="topmenu">
+<div id="drop-menutop"><ul id="menutop">
+	<li class="menutop"><a href="index.php">Home</a></li>
+				<li class="menutop"><a href="#">Mission</a>
+				<li class="menutop"><a href="#">Corporate</a></li>
+				<li><a href="#">Contatti</a></li>
+                </ul>
+</div>
+</div>
+
+
+<!------------ --->
+<div id="logo"></div>
+</div>
+
+<!-- Menu guida -->
+<div id="contmenu">
+<div id="drop-menux"><ul id="menux">
+				<li class="menux1"><a href="menusicurezza.php">Sicurezza</br>e Salute</a></li>
+				<li class="menux2"><a href="menuambiente.php">Ambiente</br>e Territorio</a>
+				<li class="menux3"><a href="menuformazione.php">Formazione</br>Aziendale</a></li>
+				<li class="menux4"><a href="menuorganizzazzione.php">Organizazzione e</br>Gestione Aziendale</a></li>
+                <li class="menux5"><a href="menupratiche.php">Pratiche</br>Amministrative</a></li>
+                <li class="menux6"><a href="menuperizie.php">Perizie</br>Tecnice e CTP</a></li>
+			</ul>
+		</div>      
+        
+</div>
