@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'asservizi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME': 'asservizi',
-        'USER': 'asservizi',
-        'PASSWORD': 'montecarmelo',
+        'NAME': 'xxxxxx',
+        'USER': 'xxxxxx',
+        'PASSWORD': 'xxxxx',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -134,9 +134,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pierangelo1982@gmail.com'
-EMAIL_HOST_PASSWORD = 'mediolanum'
-DEFAULT_FROM_EMAIL = 'pierangelo1982@gmail.com'
+EMAIL_HOST_USER = 'xxxxx@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
+DEFAULT_FROM_EMAIL = 'xxxxx@gmail.com'
 
 MYPATH = "http://localhost/"
 
