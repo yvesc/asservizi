@@ -1,8 +1,6 @@
 {% extends "base2.html" %}
-
-
-
-
+{% load i18n %}
+{% load static %}
 {% block content %}
 
 <script>
@@ -15,11 +13,13 @@ $(function(){
 });
 </script>
 
+<h3 style="color: #ae3624">{{ page_list.count }} risultati trovati per "{{ q }}"</h3>
+<hr>
 {% for page in page_list %}
 
 <div class="areaintro">
 <h3>{{ page.titolo }}</h3>
-<p>{{page.intro|safe|truncatechars:340}}</p>
+<p>{{ page.intro|safe|truncatechars:340 }}</p>
 <a id="linkprova" href="{{MYPATH}}/pagina/{{ page.id }}">continua...</a></p>
 <p></br></p>
 <hr>

@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from django.template import Context
 from django.shortcuts import render
 from django.shortcuts import render, render_to_response, get_object_or_404
+from django.template import RequestContext
 from models import Page, Categoria, Galleria, Allegati, Documento, Image
 from django.http import HttpResponseRedirect
 
@@ -14,6 +15,8 @@ from contact_form.forms import *
 from contact_form.views import *
 
 from django.db.models import Q
+
+from django.contrib.syndication.views import Feed
 
 
 
@@ -131,11 +134,30 @@ def contact(request):
 '''
 
 def search(request):
+
     try:
         q = request.GET['q']
-        posts = Page.objects.filter(titolo__search=q) | \
+        page_list = Page.objects.filter(titolo__search=q) | \
                 Page.objects.filter(intro__search=q) | \
                 Page.objects.filter(body__search=q)
-        return render_to_response('results.html', {'posts':posts, 'q':q})
+        return render_to_response('results.html', {'page_list':page_list, 'q':q}, context_instance=RequestContext(request))
     except KeyError:
-        return render_to_response('results.html')
+        return render_to_response('results.html', context_instance=RequestContext(request))
+
+
+#### PROVA FEED RSS
+
+
+class SitoFeed(Feed):
+    title = "AS servizi alle imprese s.r.l"
+    description = "Benvenuto nel sito di AS servizi alle imprese s.r.l."
+    link = "/feed/"
+
+    def items(self):
+        return Page.objects.all().order_by("-pub_date")[:5]
+    def item_title(self, item):
+        return item.titolo
+    def item_description(self, item):
+        return item.body
+    def item_link(self, item):
+        return u"/pagina/%d" % item.id 

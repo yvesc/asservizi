@@ -183,7 +183,7 @@ $(document).ready(function(){
 
 <div id="content">
 <div id="cercatore">
-<div class="cercami"><form>Cerca: <input type="text" name="textfield" style="width: 400px; height: 20px;"></form></div>
+<div class="cercami"><form action="{{ MYPATH }}/results/" action="" method="get">Cerca: <input id="id_q" name="q" type="text" name="textfield" style="width: 400px; height: 20px;"></form>{% csrf_token %}</div>
 </div>
 
 <div id="testosottocard">

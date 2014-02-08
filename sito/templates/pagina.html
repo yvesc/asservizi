@@ -1,5 +1,6 @@
 {% block content %}
-{% load i18n %}
+
+{% load static from staticfiles %}
 
 <p><span class="titolo" style="color: #ae3624;"><br/>{{ page.titolo }}</span></span>
 {{ page.body|safe|linebreaks }}
@@ -17,14 +18,11 @@
 {% endfor %}
 <p></br></p>
 <hr>
-<h3>Richiesta Informazioni</h3>
+<h3>Richiedi Informazioni</h3>
+<p></p>
 <form action="{{ MYPATH }}/contact/" method="post">{% csrf_token %}
     <p>{{ form2 }}</p>
-    <input class="pulsantone" type="submit" value="{% trans "Invia" %}" />
-</form>
-<p></br></p>
-<p></br></p>
-<p></br></p>
+    <input class="pulsantone" type="submit" value="Invia" />
 <p></br>
 </br>
 </br></p>
